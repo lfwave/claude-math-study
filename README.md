@@ -1,10 +1,24 @@
-# claude-math-study
+# kiho-math-study-skill
 
 Claude Code skill that explains mathematical equations with **`\underbrace`-annotated LaTeX** — every meaningful term gets a label underneath, delivered both as a rendered equation and as copy-paste-ready LaTeX.
 
 수식 설명을 요청하면 각 항에 `\underbrace` 주석을 단 수식을 **렌더링용(`$$...$$`)과 복사용(```latex 코드 블록)** 두 형태로 동시에 제공하는 Claude Code 스킬입니다.
 
 ## Installation / 설치
+
+### Option A — Claude Code plugin marketplace (recommended)
+
+Inside Claude Code, run:
+
+```
+/plugin marketplace add lfwave/kiho-math-study-skill
+/plugin install explaining-equations@kiho-math-study-skill
+```
+
+`lfwave/kiho-math-study-skill` is the GitHub repo; `explaining-equations` is the
+plugin and `kiho-math-study-skill` is the marketplace name.
+
+### Option B — Manual copy
 
 Copy the skill folder into your personal Claude Code skills directory:
 
@@ -76,9 +90,13 @@ The skill enforces rules that prevent common LaTeX rendering breakage, learned f
 ## Repository layout
 
 ```
-claude-math-study/
+kiho-math-study-skill/
 ├── README.md
+├── LICENSE
+├── .claude-plugin/
+│   ├── marketplace.json   # marketplace definition (for /plugin marketplace add)
+│   └── plugin.json        # plugin definition (lists the bundled skill)
 └── skills/
     └── explaining-equations/
-        └── SKILL.md
+        └── SKILL.md        # the skill itself
 ```

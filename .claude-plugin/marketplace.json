@@ -1,0 +1,30 @@
+{
+  "name": "kiho-math-study-skill",
+  "id": "kiho-math-study-skill",
+  "owner": {
+    "name": "lfwave"
+  },
+  "metadata": {
+    "description": "Claude Code skills for studying math — explain equations with copy-ready, \\underbrace-annotated LaTeX.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "explaining-equations",
+      "source": "./",
+      "description": "Explain any equation with \\underbrace-annotated LaTeX, delivered as both a rendered formula and copy-paste-ready code. Multilingual triggers.",
+      "version": "1.0.0",
+      "author": {
+        "name": "lfwave"
+      },
+      "keywords": [
+        "math",
+        "latex",
+        "equations",
+        "underbrace",
+        "education"
+      ],
+      "category": "education"
+    }
+  ]
+}

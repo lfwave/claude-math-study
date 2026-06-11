@@ -1,0 +1,19 @@
+{
+  "name": "explaining-equations",
+  "description": "Explain any equation with \\underbrace-annotated LaTeX, delivered as both a rendered formula and copy-paste-ready code. Multilingual triggers.",
+  "version": "1.0.0",
+  "author": {
+    "name": "lfwave"
+  },
+  "license": "MIT",
+  "keywords": [
+    "math",
+    "latex",
+    "equations",
+    "underbrace",
+    "education"
+  ],
+  "skills": [
+    "./skills/explaining-equations"
+  ]
+}

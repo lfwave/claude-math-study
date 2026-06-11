@@ -8,29 +8,67 @@ Claude Code skill that explains mathematical equations with **`\underbrace`-anno
 
 ### Option A — Claude Code plugin marketplace (recommended)
 
-Inside Claude Code, run:
+Type these two commands into the Claude Code prompt, one after the other:
 
 ```
-/plugin marketplace add lfwave/kiho-math-study-skill
-/plugin install explaining-equations@kiho-math-study-skill
+'/plugin marketplace add lfwave/kiho-math-study-skill'
+```
+
+```
+'/plugin install explaining-equations@kiho-math-study-skill'
 ```
 
 `lfwave/kiho-math-study-skill` is the GitHub repo; `explaining-equations` is the
 plugin and `kiho-math-study-skill` is the marketplace name.
 
-### Option B — Manual copy
+### Option B — Manual install (Claude Code desktop app / 데스크탑 앱)
 
-Copy the skill folder into your personal Claude Code skills directory:
+If you use the **Claude Code desktop app** (Mac / Windows) and prefer not to type
+commands, install by hand:
 
-```
-# Windows
-xcopy /E /I skills\explaining-equations %USERPROFILE%\.claude\skills\explaining-equations
+**1. Download the skill / 스킬 다운로드**
 
-# macOS / Linux
-cp -r skills/explaining-equations ~/.claude/skills/explaining-equations
-```
+On this GitHub page, click the green **`Code`** button → **`Download ZIP`**
+(or run `git clone https://github.com/lfwave/kiho-math-study-skill.git`).
+Unzip it. You only need the `skills/explaining-equations` folder inside.
 
-Restart Claude Code (or start a new session) and the skill is picked up automatically.
+데스크탑 앱을 쓰고 명령어 입력이 번거롭다면, 이 GitHub 페이지의 초록색 **`Code`**
+버튼 → **`Download ZIP`** 으로 내려받아 압축을 풉니다. 그 안의
+`skills/explaining-equations` 폴더만 있으면 됩니다.
+
+**2. Paste it into the skills folder / 스킬 폴더에 붙여넣기**
+
+Copy the whole `explaining-equations` folder into your personal Claude skills
+directory (create the `skills` folder if it doesn't exist yet):
+
+복사한 `explaining-equations` 폴더를 아래 개인 스킬 폴더에 통째로 붙여넣습니다
+(`skills` 폴더가 없으면 직접 만드세요):
+
+| OS | Paste into / 붙여넣을 위치 |
+|----|--------------------------|
+| Windows | `C:\Users\<사용자명>\.claude\skills\` |
+| macOS | `/Users/<username>/.claude/skills/` |
+| Linux | `~/.claude/skills/` |
+
+> Tip: in Windows Explorer you can paste `%USERPROFILE%\.claude\skills` into the
+> address bar to jump straight there. (`.claude` is a hidden folder — enable
+> "Hidden items" in the View menu if you can't see it.)
+>
+> 팁: 윈도우 탐색기 주소창에 `%USERPROFILE%\.claude\skills` 를 입력하면 바로
+> 이동합니다. (`.claude` 는 숨김 폴더라 안 보이면 보기 메뉴에서 "숨긴 항목"을 켜세요.)
+
+The final path should look like
+`...\.claude\skills\explaining-equations\SKILL.md`.
+
+최종 경로는 `...\.claude\skills\explaining-equations\SKILL.md` 형태가 되어야 합니다.
+
+**3. Restart / 재시작**
+
+Fully quit and reopen the Claude Code desktop app (or start a new session). The
+skill is picked up automatically — no command needed.
+
+Claude Code 데스크탑 앱을 완전히 종료했다가 다시 열면(또는 새 세션 시작) 스킬이
+자동으로 인식됩니다.
 
 ## Trigger keywords / 활성화 키워드
 
